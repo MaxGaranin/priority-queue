@@ -1,5 +1,11 @@
 const Node = require('../src/node');
 const MaxHeap = require('../src/max-heap');
+const chai = require("chai");
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
+
+const expect = chai.expect;
+chai.use(sinonChai);
 
 describe('MaxHeap', () => {
 	describe('#constructor', () => {
@@ -13,7 +19,7 @@ describe('MaxHeap', () => {
 			expect(h.parentNodes).to.deep.equal([]);
 		});
 	});
-
+ 
 	describe('#push', () => {
 		let h;
 

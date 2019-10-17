@@ -1,4 +1,10 @@
 const Node = require('../src/node');
+const chai = require("chai");
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
+
+const expect = chai.expect;
+chai.use(sinonChai);
 
 describe('Node', () => {
 	describe('#constructor', () => {
@@ -15,7 +21,7 @@ describe('Node', () => {
 			expect(node.right).to.equal(null);
 		});
 	});
-
+ 
 	describe('#appendChild', () => {
 		let parent, leftChild, rightChild;
 
