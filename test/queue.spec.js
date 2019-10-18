@@ -1,5 +1,11 @@
 const Queue = require('../src/queue');
 const MaxHeap = require('../src/max-heap');
+const chai = require("chai");
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
+
+const expect = chai.expect;
+chai.use(sinonChai);
 
 describe('PriorityQueue', () => {
 	describe('#constructor', () => {
@@ -17,7 +23,7 @@ describe('PriorityQueue', () => {
 			expect(q.heap).to.be.instanceof(MaxHeap);
 		});
 	});
-
+ 
 	describe('#push', () => {
 		let q;
 
